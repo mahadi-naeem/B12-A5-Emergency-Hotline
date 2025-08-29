@@ -19,31 +19,33 @@
 
 <body>
     <!-- Navbar section -->
-    <nav class="flex justify-between items-center max-w-[1800px] mx-auto mt-5 bg-[#ffffff] pb-5">
+    <nav class="flex flex-col md:flex-row justify-between items-center max-w-[1800px] mx-auto mt-5 bg-[#ffffff] pb-5">
         <div class="nav-left flex items-center justify-center gap-5">
             <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="Bd logo">
             <h1 class="font-bold text-2xl text-[#006747]">Emergency <br>Service</h1>
         </div>
-        <div class="nav-right flex justify-center items-center gap-20">
-            <div class="bg-[#41ff6b1a] flex justify-center items-center  rounded-lg p-1 px-5 gap-2">
-                <p>0</p>
-                <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="heart">
+
+        <div class="nav-right flex flex-col md:flex-row justify-center items-center md:gap-20 gap-4 mt-2">
+            <div class="bg-[#41ff6b1a] flex justify-center items-center  rounded-lg p-1 px-5 gap-2 font-bold">
+                <p id="heart">0</p>
+                <img id="" class="w-[30px] h-[30px]" src="./assets/heart.png" alt="heart">
             </div>
             <div class="bg-[#41ff6b1a] flex justify-center items-center rounded-lg p-1 px-5 gap-2">
-                <p>0</p>
+                <p id="coin" class="font-bold">100</p>
                 <img class="w-[24px] h-[24px] p" src="./assets/coin.png" alt="coin">
             </div>
             <div class="bg-[#00a63e] flex rounded-lg p-1 px-5 gap-2">
-                <p>0</p>
-                <p class="">copy</p>
+                <p id="copy-value" class="text-white">0</p>
+                <p class="text-white">copy</p>
             </div>
 
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] p-10 mb-[48px]">
-        <img src="./assets/logo-dark.png " alt="">
+    <div
+        class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] p-10 mb-[48px]">
+        <img class="" src="./assets/logo-dark.png " alt="">
         <h1 class="font-bold text-[40px] text-[#ffffff]">Emergency Service Directory</h1>
         <p class="text-[20px] font-semibold text-[#ffffff]">Government Emergency Services at Your Fingertip – A Project
             by Government of the People’s Republic of
@@ -53,212 +55,222 @@
 
 
     <!-- Main section -->
-    <div class="grid grid-cols-4 gap-10 max-w-[1800px] mx-auto mt-5 p-5">
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-10 max-w-[1800px] mx-auto mt-5 p-5">
+
+        <!-- Card 1 -->
+        <div id="card1" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> National Emergency</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> National Emergency</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 2 -->
+        <div id="card2" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#DFEFFF] rounded-xl p-2" src="./assets/police.png" alt="">
-                <!-- <img class="w-[26px] h-[26px]" src="./assets/heart.png" alt=""> -->
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Police Helpline Number</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Police Helpline Number</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 3 -->
+        <div id="card3" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/fire-service.png" alt="">
-                <!-- <img class="w-[26px] h-[26px]" src="./assets/heart.png" alt=""> -->
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Fire Service Number</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Fire Service Number</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-
-
-
-
-
-        <div class="shadow-lg w-[400px] h-full row-span-3 ">
+        <!-- History Card -->
+        <div id="history" class="shadow-lg w-[400px] h-full row-span-3 ">
             <div class="flex justify-between items-center p-3">
-                <h3 class="flex justify-center items-center gap-1 font-semibold"><i class="fa-solid fa-clock-rotate-left"></i><span>call
-                        History</span></h3>
+                <h3 class="flex justify-center items-center gap-1 font-semibold">
+                    <i class="fa-solid fa-clock-rotate-left"></i><span>call History</span>
+                </h3>
                 <p class="bg-[#00A63E] rounded-xl text-white px-4 py-1">Clear</p>
             </div>
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 4 -->
+        <div id="card4" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Women child Helpline</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Women child Helpline</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 5 -->
+        <div id="card5" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Anti corruption Helpline</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Anti corruption Helpline</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 6 -->
+        <div id="card6" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
-                <img class="w-[35px] h-[35px]" src="./assets/ambulance.png" alt="">
-                <!-- <img class="w-[26px] h-[26px]" src="./assets/heart.png" alt=""> -->
+                <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/ambulance.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Ambulance Service</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Ambulance Service</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 7 -->
+        <div id="card7" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Electricity Service</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Electricity Service</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 8 -->
+        <div id="card8" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
             <h1 class="font-bold text-[30px] mt-5"> Brac Service</h1>
-            <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <p class="service text-[21] text-[#5C5C5C]">National Emergency</p>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-        <div class="shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
+        <!-- Card 9 -->
+        <div id="card9" class="card shadow-lg w-[436px] h-[360px] p-4 rounded-lg">
             <div class="flex justify-between items-center">
                 <img class="w-[35px] h-[35px] bg-[#FFE3E2] rounded-xl p-2" src="./assets/emergency.png" alt="">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <h1 class="font-bold text-[30px] mt-5"> Bangladesh Railway service</h1>
+            <h1 class="service font-bold text-[30px] mt-5"> Bangladesh Railway service</h1>
             <p class="text-[21] text-[#5C5C5C]">National Emergency</p>
-            <h1 class="mt-5 font-bold text-[38px]">999</h1>
+            <h1 class="number mt-5 font-bold text-[38px]">999</h1>
             <p class="text-[21] text-[#5C5C5C] bg-[#F2F2F2] w-fit rounded-md px-3">All</p>
             <div class="flex justify-between items-center mt-5">
-                <strong class="border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
+                <strong class="copy border-1 border-gray-300 rounded-lg text-[19px] py-1 px-15 flex items-center gap-2">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
                 </strong>
-
-                <strong class="bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2"><i
-                        class="fa-solid fa-phone-volume"></i>call</strong>
+                <strong
+                    class="call bg-[#00A63E] rounded-lg text-[19px] py-1 px-15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>call
+                </strong>
             </div>
-
         </div>
 
-
     </div>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
