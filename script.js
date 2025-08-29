@@ -1,12 +1,25 @@
 
+const callHistory = []
 
-//function to copy text
-async function copyToClipboard(text) {
-    try {
-        await navigator.clipboard.writeText(text);
-        alert(`Copied: ${text}`); 
-    } catch (err) {
-        console.error('Failed to copy: ', err);
+
+//function 
+function renderHistory() {
+    const historyContainer = document.getElementById('history-container')
+    historyContainer.innerHTML = ""
+    for (const data of callHistory) {
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-5 bg-slate-50 mt-3 rounded-xl">
+            <div>
+                <h1 class="font-bold">${data.Title}</h1>
+                <p>${data.number}</p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-500">${data.Date}</p>
+            </div>
+        </div>
+        `
+        historyContainer.appendChild(div)
     }
 }
 
@@ -18,16 +31,7 @@ let count = 0
 
 for (const h of hearts) {
     h.addEventListener('click', function () {
-        if (h.classList.contains('active')) {
-            // toogle
-            h.classList.remove('active')
-            h.style.color = 'black' // 
-            count--
-        } else {
-            h.classList.add('active')
-            h.style.color = 'red'
-            count++
-        }
+        count++
         heartCounter.innerText = count
     })
 }
@@ -48,11 +52,20 @@ for (const c of coins) {
 
             let card = c.closest('.card')
 
-            let serviceName = card.getElementsByClassName('service')[0].innerText.trim()
+            let serviceName = card.getElementsByClassName('service')[0].innerText
 
-            let number = card.getElementsByClassName('number')[0].innerText.trim()
+            let number = card.getElementsByClassName('number')[0].innerText
 
-            alert("Service: " + serviceName + "\nNumber: " + number)
+            alert("Calling " + serviceName + " " + number + "...")
+
+            const data = {
+                Title: serviceName,
+                number: number,
+                Date: new Date().toLocaleTimeString()
+            }
+            callHistory.push(data)
+            console.log(data)
+            renderHistory()
         }
         else {
             alert("Not available coin")
@@ -73,30 +86,49 @@ for (const copy of copies) {
     copy.addEventListener('click', function () {
         // console.log('get')
         // console.log(coinCounter)
-        alert('increase the copy count')
+        // alert('increase the copy count')
         copyCounter++
         copyElement.innerText = copyCounter
-    })
-}
 
+        // copy number
+        let card = copy.closest('.card')
 
-//copy number
-// Get all "copy" buttons
-const copyButtons = document.getElementsByClassName('fa-copy')
-
-for (const btn of copyButtons) {
-    btn.addEventListener('click', function () {
-        // Find the parent card (it has the class shadow-lg)
-        let card = btn.closest('.shadow-lg')
-
-        // Get the number inside that card
         let numberElement = card.getElementsByClassName('number')[0]
-        let numberText = numberElement.innerText.trim()
+        let numberText = numberElement.innerText
 
-        // Copy the number
         navigator.clipboard.writeText(numberText)
+        alert("Number is Copied: " + numberText)
     })
 }
+
+//History
+document.getElementById('history').addEventListener('click', function () {
+    const historyContainer = document.getElementById('history-container')
+
+    historyContainer.innerHTML = ""
+
+    for (const data of callHistory) {
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-5 border-b border-gray-200">
+            <div>
+                <h1 class="font-bold">${data.Title}</h1>
+                <p>${data.number}</p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-500">${data.Date}</p>
+            </div>
+        </div>
+        `
+        historyContainer.appendChild(div)
+    }
+})
+
+document.getElementById('clear-history').addEventListener('click', function () {
+    callHistory.length = 0  
+    renderHistory()         
+})
+
 
 
 
