@@ -111,10 +111,43 @@ You have to create a `Readme.md` file. and write down following questions. Dont 
 ### 6. Answer the following questions clearly:
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+  GetElementById - select unique Id
+  etElementsByClassName - select all element with given class
+  querySelector - select first selector
+  uerySelectorAll - select all selector that matches
+
 2. How do you **create and insert a new element into the DOM**?
+  
+  const div = document.createElement('div')
+        div.innerHTML = `
+        <div>
+            <div>
+                <h1 class="font-bold">${data.Title}</h1>
+                <p>${data.number}</p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-500">${data.Date}</p>
+            </div>
+        </div>
+        `
+        historyContainer.appendChild(div)
+
+
 3. What is **Event Bubbling** and how does it work?
+  When an event is triggered on an element, it first runs on that element, then bubbles up to its parent, then its grandparent and so on up to document.
+
+  example:
+      if click on child then its bubbles also parent
+
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+  Instead of attaching event listeners to many child elements, attach one listener to a parent element, and use event bubbling to handle events for its children.
+
+  its uaeful because:
+    for better performance, work with dynamically added element
+
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
+    preventDefault(): Deafault browser behabiour for an event
+    stopPropagation(): Stop the event from bubbling up
 
 ---
 
